@@ -1,0 +1,16 @@
+PassengerAppRoot /home/seuusuario/public_html/geradorpdf
+PassengerBaseURI /
+PassengerPython /home/seuusuario/virtualenv/geradorpdf/3.9/bin/python3
+
+# Configurações de segurança
+<Files passenger_wsgi.py>
+    Require all granted
+</Files>
+
+# Redirecionar tudo para a aplicação Flask
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(temp_pdfs/.*)$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ passenger_wsgi.py [QSA,L]

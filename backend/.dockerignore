@@ -1,0 +1,15 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+temp_pdfs/*.pdf
+*.log
+.git
+.gitignore
+README.md
+DEPLOY_*.md
+*.bat

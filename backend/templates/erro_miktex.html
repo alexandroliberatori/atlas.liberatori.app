@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiKTeX Precisa de Atualização</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #f44336;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .icon {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .steps {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .step {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .step::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">⚠️</div>
+        <h1>MiKTeX Precisa de Atualização</h1>
+        
+        <p>O MiKTeX está instalado, mas precisa ser atualizado antes de compilar PDFs.</p>
+        
+        <div class="warning">
+            <strong>Erro:</strong> "So far, you have not checked for MiKTeX updates"
+        </div>
+        
+        <div class="steps">
+            <h3>Solução Rápida (2 minutos):</h3>
+            
+            <div class="step">
+                Abra o <strong>MiKTeX Console</strong> (procure no menu Iniciar do Windows)
+            </div>
+            
+            <div class="step">
+                Clique no botão <strong>"Check for updates"</strong>
+            </div>
+            
+            <div class="step">
+                Clique em <strong>"Update now"</strong> e aguarde
+            </div>
+            
+            <div class="step">
+                Vá em <strong>Settings</strong> → Marque <strong>"Always install missing packages on-the-fly"</strong>
+            </div>
+            
+            <div class="step">
+                Reinicie o servidor Flask e tente novamente
+            </div>
+        </div>
+        
+        <p><strong>Alternativa:</strong> Execute o arquivo <code>atualizar_miktex.bat</code> na pasta <code>web/</code></p>
+        
+        <a href="/" class="btn">← Voltar para o Gerador</a>
+    </div>
+</body>
+</html>

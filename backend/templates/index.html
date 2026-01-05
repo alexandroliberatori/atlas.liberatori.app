@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de PDF - LaTeX Online</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 Gerador de PDF - LaTeX</h1>
+            <p class="subtitle">Compile seu código LaTeX online e gere PDFs profissionais (PDFLaTeX)</p>
+            <div id="status-latex" class="status-badge">
+                <span id="status-icon">⏳</span>
+                <span id="status-text">Verificando LaTeX...</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="editor-section">
+                <div class="toolbar">
+                    <button id="btn-exemplo" class="btn btn-secondary">
+                        📝 Carregar Exemplo
+                    </button>
+                    <button id="btn-limpar" class="btn btn-secondary">
+                        🗑️ Limpar
+                    </button>
+                </div>
+                
+                <textarea id="editor-latex" placeholder="Cole ou digite seu código LaTeX aqui..."></textarea>
+            </div>
+
+            <div class="actions">
+                <button id="btn-gerar" class="btn btn-primary">
+                    <span id="btn-icon">🚀</span>
+                    <span id="btn-text">Gerar PDF</span>
+                </button>
+            </div>
+
+            <div id="resultado" class="resultado hidden">
+                <div id="mensagem-sucesso" class="alert alert-success hidden">
+                    <strong>✅ Sucesso!</strong>
+                    <p>PDF gerado com sucesso!</p>
+                    <button id="btn-download" class="btn btn-success">
+                        📥 Baixar PDF
+                    </button>
+                </div>
+
+                <div id="mensagem-erro" class="alert alert-error hidden">
+                    <strong>❌ Erro na Compilação</strong>
+                    <pre id="erro-detalhes"></pre>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Sociedade Liberatori - Gerador de PDF LaTeX</p>
+            <p class="info">Suporta XeLaTeX com fontspec e fontes do sistema</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

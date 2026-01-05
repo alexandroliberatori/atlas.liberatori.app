@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+\title{Documento Simples}
+\author{Sociedade Liberatori}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Teste}
+Este e um documento de teste simples.
+
+\end{document}
