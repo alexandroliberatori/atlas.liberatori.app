@@ -1,12 +1,18 @@
 FROM python:3.9-slim
 
-# Instalar TeX Live e dependências
+# Instalar TeX Live, dependências e fontes
 RUN apt-get update && apt-get install -y \
     texlive-xetex \
     texlive-fonts-recommended \
+    texlive-fonts-extra \
     texlive-latex-extra \
     texlive-lang-portuguese \
     fonts-liberation \
+    fonts-liberation2 \
+    fonts-freefont-ttf \
+    fonts-dejavu \
+    fontconfig \
+    && fc-cache -fv \
     && rm -rf /var/lib/apt/lists/*
 
 # Criar diretório de trabalho

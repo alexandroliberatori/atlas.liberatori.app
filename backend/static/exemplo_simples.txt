@@ -1,6 +1,11 @@
 \documentclass{article}
 \usepackage{fontspec}
-\setmainfont{Arial}
+% Fontes disponíveis no servidor:
+% - Liberation Sans (substituto do Arial)
+% - Liberation Serif (substituto do Times New Roman)
+% - DejaVu Sans / DejaVu Serif
+% - FreeSans / FreeSerif
+\setmainfont{Liberation Sans}
 
 \title{Documento Simples}
 \author{Sociedade Liberatori}
@@ -10,6 +15,6 @@
 \maketitle
 
 \section{Teste}
-Este e um documento de teste simples.
+Este é um documento de teste simples.
 
 \end{document}
