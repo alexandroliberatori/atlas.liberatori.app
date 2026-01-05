@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gerador-pdf-liberatori
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /verificar-latex
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: FLASK_ENV
+        value: production
